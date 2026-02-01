@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharma Tent House</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1 id="title">Sharma Tent House</h1>
+<p id="subtitle">Complete Event Management</p>
+<button class="lang-btn" onclick="toggleLang()">हिंदी / English</button>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="hero">
+<div>
+<h2 id="heroText">Best Tent & Event Services in Mughalsarai</h2>
+
+<!--Call and whatsapp button-->
+
+<button onclick="callNow()">Call Now</button>
+<button onclick="openWhatsApp()">WhatsApp Now</button>
+
+
+</div>
+</div>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+<p id="aboutText" style="text-align:center;line-height:1.8">
+We provide complete tent house and event organizing services for weddings, parties,
+religious and public events at affordable prices.
+</p>
+</section>
+
+<!--Our Services-->
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+        
+        <div class="service">
+            <a href="https://www.thewhitepalace.co.in/" 
+            style="text-decoration: none; 
+            color: white;
+        ">
+            💒White Palace: Click here to book</a></div>
+
+        <div class="service">🎉 Wedding Decoration</div>
+
+        <div class="service">🎂 Birthday & Party</div>
+
+        <div class="service">🛕 Religious Functions</div>
+
+        <div class="service">🏛️ Political Events</div>
+
+        <div class="service">💡 Lighting & Sound</div>
+
+        <div class="service">🪑 Chairs, Tables & Stage</div>
+
+        <div class="service">🍽️ Catering Services</div>
+
+    </div>
+
+
+<!--Gallery-->
+    </section>
+
+    <section id="gallery">
+
+        <h2 class="section-title">Gallery</h2>
+
+        <div class="gallery">
+            <img src="images/whitepalace.jpg">
+
+            <img src="images/stagewhitepalace.jpg">
+
+            <img src="images/hallentrance.jpg">
+
+            <img src="images/gatewhitepalace.jpg">
+
+            <img src="images/misc.jpg">
+
+            <img src="images/mandap.jpeg">
+
+            <img src="images/photoshoot.jpg">
+
+            <img src="images/stage2.jpeg">
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+    <h2 class="section-title">Send Enquiry</h2>
+    <div class="contact-box">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="tel" id="phone" placeholder="Mobile Number">
+    <textarea id="msg" rows="4" placeholder="Event Details"></textarea>
+    <button onclick="sendWhatsApp()">Send on WhatsApp</button>
+</div>
+
+<div class="map">
+    <iframe
+        src="https://www.google.com/maps?q=25.290496608843995,83.11888258650758&z=16&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</div>
+
+</section>
+
+<footer>
+    <p>📍 24/264, Jaishwal School Rd, Patel Nagar, Mughalsarai, Uttar Pradesh 232101</p>
+    <p>📞 9415873012</p>
+    <p>© 2026 Sharma Tent House</p>
+</footer>
+
+
+
+
+
+<!-- Javascript -->
+<script>
+let isHindi=false;
+
+function toggleLang(){
+isHindi=!isHindi;
+
+document.getElementById("title").innerText = isHindi ? "श्री साईं टेंट हाउस" : "Shree Sai Tent House";
+document.getElementById("subtitle").innerText = isHindi ? "टेंट एवं इवेंट सेवाएं" : "Complete Event Organizers";
+document.getElementById("heroText").innerText = isHindi ?
+"आपके शहर की सबसे भरोसेमंद टेंट सेवा" :
+"Best Tent & Event Services in Your Town";
+
+document.getElementById("aboutText").innerText = isHindi ?
+"हम शादी, पार्टी, धार्मिक एवं सार्वजनिक कार्यक्रमों के लिए पूरी टेंट और सजावट सेवा प्रदान करते हैं।" :
+"We provide complete tent house and event organizing services for weddings, parties, religious and public events.";
+}
+
+
+// Call and Whatsapp Function:
+
+function openWhatsApp(){
+window.open("https://wa.me/9415873012","_blank");
+}
+
+function callNow(){
+    window.location.href = "tel:+9415873012";
+}
+
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
+
+if(name==""||phone==""||msg==""){
+alert("Please fill all details");
+return;
+}
+
+let text=`Name: ${name}%0APhone: ${phone}%0AMessage: ${msg}`;
+window.open(`https://wa.me/9415873012?text=${text}`,"_blank");
+}
+</script>
+
+</body>
+</html>
