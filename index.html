@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharma Tent House Mughalsarai</title>
+<title>Sharma Tent House</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,33 +11,32 @@
 
 <body>
 
+<!-- Header -->
 <header>
-
 <h1 id="title">Sharma Tent House</h1>
 <p id="subtitle">Complete Event Management</p>
-<button class="lang-btn" onclick="toggleLang()">हिंदी / English</button>
-
 </header>
 
+
+<!-- NavBar -->
 <nav>
-
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
 </nav>
 
+
+<!-- Hero Section -->
 <div class="hero">
-<div>
-<h2 id="heroText">Best Tent & Event Services in Mughalsarai</h2>
+    <div>
+        <h2 id="heroText">Best Tent & Event Services in Mughalsarai</h2>
 
-<!--Call and whatsapp button-->
+<!--Call and whatsapp button in Hero Section-->
 
-<button onclick="callNow()">Call Now</button>
-<button onclick="openWhatsApp()">WhatsApp Now</button>
-
-</div>
+        <button onclick="callNow()">Call Now</button>
+        <button onclick="openWhatsApp()">WhatsApp Now</button>
+    </div>
 </div>
 
 <section id="about">
@@ -141,23 +140,6 @@ religious and public events at affordable prices.
 
 <!-- Javascript -->
 <script>
-let isHindi=false;
-
-function toggleLang(){
-isHindi=!isHindi;
-
-document.getElementById("title").innerText = isHindi ? "शर्मा टेंट हाउस" : "Sharma Tent House";
-document.getElementById("subtitle").innerText = isHindi ? "टेंट एवं इवेंट सेवाएं" : "Complete Event Management";
-document.getElementById("heroText").innerText = isHindi ?
-"आपके शहर की सबसे भरोसेमंद टेंट सेवा" :
-"Best Tent & Event Services in Your Town";
-
-document.getElementById("aboutText").innerText = isHindi ?
-"हम शादी, पार्टी, धार्मिक एवं सार्वजनिक कार्यक्रमों के लिए पूरी टेंट और सजावट सेवा प्रदान करते हैं।" :
-"We provide complete tent house and event organizing services for weddings, parties, religious and public events.";
-}
-
-
 // Call and Whatsapp Function:
 
 function openWhatsApp(){
@@ -165,7 +147,7 @@ window.open("https://wa.me/9415873012","_blank");
 }
 
 function callNow(){
-    window.location.href = "tel:9415873012";
+    window.location.href = "tel:+9415873012";
 }
 
 function sendWhatsApp(){
@@ -185,6 +167,4 @@ window.open(`https://wa.me/9415873012?text=${text}`,"_blank");
 
 </body>
 </html>
-
-
 
